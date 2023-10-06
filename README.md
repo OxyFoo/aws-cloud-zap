@@ -17,8 +17,6 @@ What is Cloud Resume Challenge? - [The Cloud Resume Challenge](https://cloudresu
 - GitHub Actions
 - Terraform (NO)
 
-## [Live Demo 🔗](https://resume.rishab.cloud)
-
 ## YouTube Series I used to learn 
 
 - Part 1 - [What is the Cloud Resume Challenge?](https://youtu.be/NNKzYhvqq5w)
@@ -28,4 +26,5 @@ What is Cloud Resume Challenge? - [The Cloud Resume Challenge](https://cloudresu
 - Part 5 - [Setting up Git repo and CI/CD for frontend website](https://youtu.be/qFEf6iOo-4g)
 - Part 6 - [Implementing Infrastructure as Code with Terraform](https://youtu.be/rzdSuiU_TQc)
 
-
+his github : https://github.com/rishabkumar7/aws-cloud-resume-challenge
+his result : https://resume.rishab.cloud
