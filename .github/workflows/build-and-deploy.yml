@@ -5,6 +5,7 @@ on:
     paths:
       - 'src/**'
       - 'public/**'
+      - .github/workflows/**
     branches:
       - main
 
@@ -25,6 +26,12 @@ jobs:
       - name: Check existence of index.html
         run: test -f output/index.html
 
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: website-output
+          path: output/
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -32,6 +39,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Download website output
+        uses: actions/download-artifact@v2
+        with:
+          name: website-output
+          path: output
 
       - name: Sync files to S3
         uses: jakejarvis/s3-sync-action@master

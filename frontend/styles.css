@@ -1,0 +1,17 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.hello {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+p {
+    color: red;
+    font-size: 24px;
+}
