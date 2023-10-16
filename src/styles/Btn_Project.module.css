@@ -1,0 +1,8 @@
+.btn_project {
+    margin:0.4rem 1rem 0.4rem 0.4rem;
+}
+
+.btn_project:hover {
+    color: #E21F1F;
+    cursor: pointer;
+}

@@ -1,11 +1,10 @@
 name: Upload website to S3 and Invalidate CloudFront
 
-on: 
-  push:
-    paths:
-      - 'frontend/**' 
-    branches: 
-      - main 
+on:
+  workflow_run:
+    workflows: ["Build Website"]
+    types:
+      - completed
 
 jobs: 
   deploy: 

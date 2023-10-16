@@ -1,0 +1,26 @@
+name: Build Website
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'public/**'
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Check existence of index.html
+        run: test -f output/index.html

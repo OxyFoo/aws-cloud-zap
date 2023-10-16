@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  color: #f9f9f9;
+}
+
+
+.profile {
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+}
+
+.meImage {
+  height: 33%;
+  width: auto;
+  margin: 0 0 1rem 0;
+}
+
+.importantText {
+  color: rgb(255, 0, 0);
+}
+
+.marginSides {
+  margin: 0 15%;
+}
+
+@media (orientation: portrait) {
+  .about {
+    flex-direction: column;
+  }
+
+  .marginSides {
+    margin: 0 0;
+  }
+}
