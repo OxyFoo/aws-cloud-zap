@@ -1,15 +1,35 @@
-name: Upload website to S3 and Invalidate CloudFront
+name: Build Website
 
 on:
-  workflow_run:
-    workflows: ["Build Website"]
-    types:
-      - completed
+  push:
+    paths:
+      - 'src/**'
+      - 'public/**'
+    branches:
+      - main
 
-jobs: 
-  deploy: 
+jobs:
+  build:
     runs-on: ubuntu-latest
-    steps: 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Check existence of index.html
+        run: test -f output/index.html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -17,12 +37,12 @@ jobs:
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete
-        env: 
+        env:
           AWS_S3_BUCKET: ${{secrets.AWS_S3_BUCKET}}
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           AWS_REGION: 'eu-west-3'
-          SOURCE_DIR: 'frontend'
+          SOURCE_DIR: 'output'
 
       - name: Configure AWS credentials for invalidation
         uses: aws-actions/configure-aws-credentials@v1
@@ -30,7 +50,9 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'eu-west-3'
-          
+
       - name: Invalidate CloudFront Distribution
         run: |
           aws cloudfront create-invalidation --distribution-id ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}} --paths "/*"
+
+
