@@ -1,0 +1,81 @@
+.projectsContainer {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-gap: 1rem;
+  padding: 1rem;
+  align-items: stretch;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .blurred {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    border-radius: 100%;
+    background-color: rgba(226, 31, 31, 0.2);
+    filter: blur(150px);
+    margin: 10px;
+  }
+}
+
+
+.projectDiv {
+  border: 1px solid rgba(255, 255, 255, 0.63);
+  color: #f9f9f9;
+  /*background: linear-gradient(155.01deg, rgba(242, 242, 242, 0.0066) -1.13%, rgba(242, 242, 242, 0.0111) 104.04%);*/
+  padding: 1rem 1.5rem;
+  z-index: 1;
+}
+
+.tech {
+  padding: 0.3rem;
+  margin: 0.3rem;
+  border: 1px solid #4a4a4a;
+  font-size: 0.9rem;
+  align-self: center;
+  background: linear-gradient(155.01deg, rgba(242, 242, 242, 0.0066) -1.13%, rgba(242, 242, 242, 0.0111) 104.04%);
+}
+
+.btnFilter {
+  margin: 6px 6px;
+  cursor: pointer;
+}
+
+.btnFilter:hover {
+  color: #e76262;
+}
+
+.btnFilterActive {
+  color: #E21F1F;
+}
+
+.btnFilterNotActive {
+  color: #4a4a4a;
+}
+
+.projectTitle {
+  min-height: 4rem;
+  max-height: 4rem;
+  overflow: hidden;
+}
+
+.projectDescription {
+  min-height: 12rem;
+  max-height: 12rem;
+  overflow-y: auto;
+}
+
+.projectTech {
+  min-height: 5rem;
+}
+
+.projectButton {
+  min-height: 4rem;
+}

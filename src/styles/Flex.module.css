@@ -1,0 +1,61 @@
+.flexOne {
+    flex: 1;
+}
+
+.flexWrapper {
+    flex-wrap: wrap;
+}
+
+.flexWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexSC {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexRowCC {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexRowSC {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexColumnCC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridTwoMiddle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+}
+
+
+@media (orientation: portrait) {
+
+
+}

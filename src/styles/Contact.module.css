@@ -1,0 +1,17 @@
+.contact {
+    margin: 4rem 0;
+    padding: 0 1rem;
+  }
+  
+  .contact a {
+    color: rgba(255, 252, 249, 1);
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    color:#E21F1F;
+  }
+  
+  .contactPart {
+    margin: 24px 24px;
+  }

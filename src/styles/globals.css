@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: 'NeueMachina-Regular';
+  src: url('/fonts/NeueMachina-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("/fonts/Epilogue-VariableFont_wght.ttf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'NeueMachina-Regular', 'Roboto', sans-serif;
+  color:#FFFCF9;
+  background-color: #1D1D1D;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; /* doesn't work right now */
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+.centeredTitle {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Colors */
+.textWhite1 {
+  color: #FFFCF9;
+}
+
+.textWhite2 {
+  color: #FFFFFF;
+}
+
+.textGray1 {
+  color: rgba(219, 219, 219, 1);
+}
+
+.textPurple1 {
+  color:rgb(130, 78, 228);
+}
+
+.textPurple2 {
+  color:rgb(113, 21, 184);
+}
+
+.textPurpleZap {
+  color:rgb(80,16,130);
+}
+
+.text
+
+.backgroundWhite1 {
+  background-color: #FFFCF9;
+}
+
+.backgroundRed1 {
+  background-color: #D01F1F;
+}
+
+.backgroundRed2 {
+  background-color: #E21F1F;
+}
+
+.borderWhite1 {
+  border: 1px solid #FFFCF9;
+}
+
+.borderRed1 {
+  border: 1px solid #D01F1F;
+}
+
+.borderRed2 {
+  border: 1px solid #E21F1F;
+}
+
+
+/* Titles */
+h1, h2, h3, h4, h5{
+  font-family: 'NeueMachina-Regular', 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0.75rem 0 0.2rem 0;
+}
+
+h1 {
+  line-height: 90%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2 {
+  line-height: 110%;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  line-height: 120%;
+  font-size: 1.3rem;
+}
+
+h4 {
+  line-height: 110%;
+  font-size: 1rem;
+}
+
+h5 {
+  line-height: 120%;
+  font-size: 0.9rem;
+}
+
+.smallText {
+  font-size: 1rem;
+}
+
+@media (orientation: portrait) {
+
+}
