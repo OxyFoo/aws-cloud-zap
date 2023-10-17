@@ -17,7 +17,7 @@ const About = () => {
 
   useEffect(() => {
     updateCounter();
-  });
+  }, []); 
 
   return (
     <section className={styles.about}>
