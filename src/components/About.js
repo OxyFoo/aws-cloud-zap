@@ -16,8 +16,16 @@ const About = () => {
   }
 
   useEffect(() => {
-    updateCounter();
-  }, []); 
+    // Check if the function has been called before
+    const isCalledBefore = localStorage.getItem("useEffectCalled");
+    //console.log("Device knonw ?", isCalledBefore)
+  
+    if (!isCalledBefore) {
+      updateCounter();
+      // Mark the function as called for this device
+      localStorage.setItem("useEffectCalled", "true");
+    }
+  }, []);
 
   return (
     <section className={styles.about}>
