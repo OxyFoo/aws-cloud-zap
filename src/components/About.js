@@ -26,10 +26,11 @@ const About = () => {
           </h4>
 
           <div className={stylesFlex.flexWrapper}>
-            <Tag first_text="" important_text="Play" after_text="with me" href="https://www.insa-toulouse.fr/fr/index.html" />
-            <Tag first_text="Listen my" important_text="music" after_text="to focus" href="https://www.insa-toulouse.fr/fr/index.html" />
-            <Tag first_text="Turn your life into a " important_text="Game" after_text="" href="https://www.insa-toulouse.fr/fr/index.html" />
-            <Tag first_text="Meet" important_text="Game Life" after_text="community" href="https://www.insa-toulouse.fr/fr/index.html" />
+            {/*<Tag first_text="" important_text="Play" after_text="with me" href="https://www.insa-toulouse.fr/fr/index.html" />*/}
+            <Tag first_text="Listen my" important_text="music" after_text="to focus" href="https://song.link/oxyfoo" />
+            <Tag first_text="Turn your life into a " important_text="Game" after_text="(iOS)" href="https://apps.apple.com/fr/app/game-life/id1587486522" />
+            <Tag first_text="Turn your life into a " important_text="Game" after_text="(android)" href="https://play.google.com/store/apps/details?id=com.gamelife&hl=fr&gl=US" />
+            <Tag first_text="Meet" important_text="Game Life" after_text="community" href="https://discord.gg/FfJRxjNAwS" />
           </div>
         </div>
 
