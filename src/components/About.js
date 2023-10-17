@@ -22,7 +22,7 @@ const About = () => {
             I&apos;m <span className={'textPurple1'}>Zap !</span>
           </h1>
           <h4 className={`textWhite1`}>
-            I&apos;m a small creature created by <strong><a className={'textPurple1'} href="https://gerem.ca/Projects/">Gerem</a></strong> and <strong><a className={'textPurple1'} href="oxyfoo.com/pierre">Pierre</a></strong> and I&apos;m here because it&apos;s funnier with me !
+            I&apos;m a small creature created by <strong><a className={'textPurple1'} href="https://gerem.ca/Projects/">Gerem</a></strong> and <strong><a className={'textPurple1'} href="https://oxyfoo.com/pierre">Pierre</a></strong> and I&apos;m here because it&apos;s funnier with me !
           </h4>
 
           <div className={stylesFlex.flexWrapper}>
