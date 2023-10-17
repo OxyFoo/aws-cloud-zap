@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image'
 import styles from '../styles/About.module.css';
 import Tag from './Tag';
 import stylesFlex from '../styles/Flex.module.css'
 
 const About = () => {
+
+  const [counterNumber, setCounterNumber] = React.useState("Loading..");
+
+  // Fetch a link to get the number of views and eddit the text with id counter-number : https://3k5hrt4uts4s7b24qxcughfwwa0rscay.lambda-url.eu-west-3.on.aws/
+  async function updateCounter() {
+    let response = await fetch("https://3k5hrt4uts4s7b24qxcughfwwa0rscay.lambda-url.eu-west-3.on.aws/");
+    let data = await response.json();
+    setCounterNumber(`${data} views so far ! `);
+  }
+
+  useEffect(() => {
+    updateCounter();
+  });
+
   return (
     <section className={styles.about}>
+
       <Image
         //src="https://oxyfoo.com/pierre/source/images/basic_portfolio/ball_cropped.png"
         src="./images/zap/purpleUp.png"
@@ -33,8 +48,9 @@ const About = () => {
             <Tag first_text="Meet" important_text="Game Life" after_text="community" href="https://discord.gg/FfJRxjNAwS" />
           </div>
         </div>
-
-
+      </div>
+      <div style={{ position: 'absolute', bottom: 20, right: 20 }}>
+        <p>{counterNumber}</p>
       </div>
     </section>
   );
